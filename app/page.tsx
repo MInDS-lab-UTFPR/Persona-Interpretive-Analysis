@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         url: `${siteUrl}og.png`,
         width: 1200,
         height: 630,
-        alt: "The same city, different lenses",
+        alt: "Scientific overview of persona-conditioned multimodal urban perception, showing convergent descriptive grounding and varied interpretive framing",
       },
     ],
   },
@@ -165,27 +165,17 @@ export default function Home() {
           <div className="content-wide">
             <h2 id="overview-title" className="visually-hidden">Overview</h2>
             <figure className="paper-figure overview-figure">
-              <a
-                className="figure-image-link"
-                href="paper/figure-1-functional-framework.png"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  src="paper/figure-1-functional-framework.png"
-                  width="1980"
-                  height="1265"
-                  alt="Panel A moves from an urban scene and persona profile through an MLLM to captions, perception tags, and justifications with increasing interpretive abstraction. Panel B applies three personas to the same brick campus scene: captions describe similar visible content while tags and justifications differ in emphasis."
-                />
-              </a>
+              <img
+                src="paper/figure-1-functional-framework.svg"
+                width="1900"
+                height="1124"
+                alt="Panel A moves from an urban scene and persona profile through an MLLM to captions, perception tags, and justifications with increasing interpretive abstraction. Panel B applies three personas to the same brick campus scene: captions describe similar visible content while tags and justifications differ in emphasis."
+              />
               <figcaption>
                 <strong>Overview.</strong> Persona-conditioned outputs are separated
                 into descriptive grounding, an intermediate semantic layer, and
                 interpretive framing. Captions converge on visible content, while
-                perception tags and justifications vary in emphasis and evaluation.{" "}
-                <a href="paper/figure-1-functional-framework.png" target="_blank" rel="noreferrer">
-                  Open full-size figure.
-                </a>
+                perception tags and justifications vary in emphasis and evaluation.
               </figcaption>
             </figure>
           </div>
@@ -284,20 +274,13 @@ export default function Home() {
             </ul>
 
             <figure className="paper-figure results-figure">
-              <a
-                className="figure-image-link"
-                href="paper/persona-effect-summary.svg"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  src="paper/persona-effect-summary.svg"
-                  width="1474"
-                  height="571"
-                  loading="lazy"
-                  alt="Two-panel dot plot comparing within-minus-cross similarity differences by persona dimension and output type for Qwen3-VL and Gemma4"
-                />
-              </a>
+              <img
+                src="paper/persona-effect-summary.svg"
+                width="1474"
+                height="571"
+                loading="lazy"
+                alt="Two-panel dot plot comparing within-minus-cross similarity differences by persona dimension and output type for Qwen3-VL and Gemma4"
+              />
               <figcaption>
                 <strong>Persona effect by dimension and modality.</strong> Points are
                 within-minus-cross means; bars are 95% BCa bootstrap confidence intervals
@@ -306,10 +289,7 @@ export default function Home() {
                 The gray ±0.01 band is an exploratory caption-effect reference, not an
                 equivalence threshold. In both models, justification differences exceed
                 caption differences for economic status, political orientation, and
-                personality.{" "}
-                <a href="paper/persona-effect-summary.svg" target="_blank" rel="noreferrer">
-                  Open full-size figure.
-                </a>
+                personality.
               </figcaption>
             </figure>
           </div>

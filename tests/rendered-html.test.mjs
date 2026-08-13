@@ -46,29 +46,43 @@ test("server-renders the academic paper page", async () => {
   assert.match(html, /citation_online_date/);
   assert.match(html, /citation_doi/);
   assert.match(html, /application\/ld\+json/);
+  assert.match(
+    html,
+    /Scientific overview of persona-conditioned multimodal urban perception/,
+  );
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|Persona Lens/);
 });
 
 test("ships publication and citation assets", async () => {
-  const [page, layout, packageJson, bibtex, citation] =
+  const [page, layout, packageJson, bibtex, citation, ogImage, ogSource] =
     await Promise.all([
       readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
       readFile(new URL("../app/layout.tsx", import.meta.url), "utf8"),
       readFile(new URL("../package.json", import.meta.url), "utf8"),
       readFile(new URL("../public/citation.bib", import.meta.url), "utf8"),
       readFile(new URL("../CITATION.cff", import.meta.url), "utf8"),
+      readFile(new URL("../public/og.png", import.meta.url)),
+      readFile(new URL("../artwork/og-social-card.svg", import.meta.url), "utf8"),
     ]);
 
   assert.match(page, /export const dynamic = "force-static"/);
+  assert.match(page, /paper\/figure-1-functional-framework\.svg/);
   assert.match(page, /paper\/persona-effect-summary\.svg/);
+  assert.doesNotMatch(page, /figure-image-link|Open full-size figure/);
+  assert.doesNotMatch(page, /paper\/figure-1-functional-framework\.png/);
   assert.match(page, /ScholarlyArticle/);
   assert.match(layout, /Persona Prompting in Multimodal Urban Perception/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
   assert.match(bibtex, /eprint=\{2605\.29064\}/);
   assert.match(citation, /doi: "10\.48550\/arXiv\.2605\.29064"/);
+  assert.equal(ogImage.subarray(1, 4).toString("ascii"), "PNG");
+  assert.equal(ogImage.readUInt32BE(16), 1200);
+  assert.equal(ogImage.readUInt32BE(20), 630);
+  assert.match(ogSource, /SHARED IMAGE \+ PERSONA PROFILES/);
   await Promise.all([
     access(new URL("../public/og.png", import.meta.url)),
     access(new URL("../public/favicon.png", import.meta.url)),
+    access(new URL("../public/paper/figure-1-functional-framework.svg", import.meta.url)),
     access(new URL("../public/paper/persona-effect-summary.svg", import.meta.url)),
   ]);
 });

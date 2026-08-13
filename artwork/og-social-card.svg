@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="630" viewBox="0 0 1200 630">
+  <title>Social preview for Persona Prompting in Multimodal Urban Perception</title>
+  <desc>A scientific presentation graphic showing multiple personas analyzing the same urban scene, with descriptions converging and interpretations diverging.</desc>
+
+  <!-- Supporting illustration generated with OpenAI ImageGen, then composed here
+       with deterministic typography so the scholarly title and study facts remain exact. -->
+  <defs>
+    <clipPath id="diagram-crop">
+      <rect x="520" y="84" width="650" height="388" rx="0"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="630" fill="#ffffff"/>
+  <rect x="0" y="0" width="400" height="8" fill="#0c6864"/>
+  <rect x="400" y="0" width="400" height="8" fill="#c98923"/>
+  <rect x="800" y="0" width="400" height="8" fill="#76549c"/>
+
+  <g font-family="Avenir Next, Helvetica Neue, Arial, sans-serif">
+    <text x="64" y="58" fill="#0c6864" font-size="14" font-weight="700" letter-spacing="2.1">RESEARCH PAPER  /  ARXIV:2605.29064</text>
+
+    <text x="64" y="133" fill="#172b35" font-family="Georgia, Times New Roman, serif" font-size="45" font-weight="400" letter-spacing="-1.35">
+      <tspan x="64" dy="0">Persona Prompting in</tspan>
+      <tspan x="64" dy="52">Multimodal Urban</tspan>
+      <tspan x="64" dy="52">Perception</tspan>
+    </text>
+
+    <text x="64" y="326" fill="#41545d" font-size="22" font-weight="500">
+      <tspan x="64" dy="0">Descriptive Convergence and</tspan>
+      <tspan x="64" dy="31">Interpretive Variation</tspan>
+    </text>
+
+    <line x1="64" y1="401" x2="454" y2="401" stroke="#dfe5e7" stroke-width="1"/>
+    <text x="64" y="438" fill="#31464f" font-size="17" font-weight="500">
+      Same visual evidence. Similar descriptions.
+    </text>
+    <text x="64" y="465" fill="#76549c" font-size="17" font-weight="700">
+      Divergent interpretive framing.
+    </text>
+
+    <text x="64" y="532" fill="#172b35" font-size="13" font-weight="700" letter-spacing="0.15">119,707 ANNOTATIONS</text>
+    <circle cx="224" cy="528" r="2.3" fill="#a9b4b8"/>
+    <text x="237" y="532" fill="#172b35" font-size="12.5" font-weight="700" letter-spacing="0.1">24 PERSONA PROFILES</text>
+    <circle cx="385" cy="528" r="2.3" fill="#a9b4b8"/>
+    <text x="398" y="532" fill="#172b35" font-size="13" font-weight="700" letter-spacing="0.15">2 MLLMs</text>
+
+    <text x="64" y="588" fill="#687980" font-size="13" font-weight="600" letter-spacing="1.2">DA SILVA ET AL.  ·  2026</text>
+  </g>
+
+  <line x1="490" y1="58" x2="490" y2="574" stroke="#e7ebed" stroke-width="1"/>
+
+  <g clip-path="url(#diagram-crop)">
+    <image x="218" y="-5" width="970" height="510" xlink:href="og-scientific-flow.png" preserveAspectRatio="none"/>
+  </g>
+
+  <g font-family="Avenir Next, Helvetica Neue, Arial, sans-serif">
+    <text x="540" y="514" fill="#687980" font-size="12" font-weight="700" letter-spacing="1.25">SHARED IMAGE + PERSONA PROFILES  →  MLLM  →  OUTPUTS</text>
+    <line x1="540" y1="536" x2="1160" y2="536" stroke="#dfe5e7" stroke-width="1"/>
+
+    <circle cx="552" cy="568" r="5" fill="#278885"/>
+    <text x="567" y="574" fill="#31464f" font-size="15" font-weight="600">descriptive grounding converges</text>
+
+    <circle cx="882" cy="568" r="5" fill="#76549c"/>
+    <text x="897" y="574" fill="#31464f" font-size="15" font-weight="600">interpretive framing varies</text>
+  </g>
+</svg>
