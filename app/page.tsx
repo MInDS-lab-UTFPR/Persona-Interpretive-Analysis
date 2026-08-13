@@ -140,7 +140,7 @@ export default function Home() {
           </div>
           <div className="paper-affiliations">
             <span><sup>1</sup> University of Toronto, Canada</span>
-            <span><sup>2</sup> Universidade Tecnológica Federal do Paraná, Brazil</span>
+            <span><sup>2</sup> Federal University of Technology – Parana (UTFPR), Brazil</span>
           </div>
 
           <div className="paper-actions" aria-label="Paper resources">

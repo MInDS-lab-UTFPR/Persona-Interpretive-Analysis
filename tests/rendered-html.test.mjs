@@ -37,6 +37,8 @@ test("server-renders the academic paper page", async () => {
   assert.match(html, /Neemias da Silva/);
   assert.match(html, /Qwen3-VL-8B/);
   assert.match(html, /Gemma-4-E4B-it/);
+  assert.match(html, /Federal University of Technology – Parana \(UTFPR\), Brazil/);
+  assert.doesNotMatch(html, /Universidade Tecnológica Federal do Paraná/);
   assert.match(html, /119,707/);
   assert.match(html, /Responsible Interpretation/);
   assert.match(html, /citation_author/);
