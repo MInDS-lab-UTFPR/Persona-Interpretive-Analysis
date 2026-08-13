@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://neemiasbsilva.github.io/Persona-Interpretive-Analysis-Portfolio/sitemap.xml

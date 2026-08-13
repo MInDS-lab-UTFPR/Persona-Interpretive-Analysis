@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the paper using the metadata below."
+title: "Persona Prompting in Multimodal Urban Perception: Descriptive Convergence and Interpretive Variation"
+type: software
+authors:
+  - family-names: "da Silva"
+    given-names: "Neemias"
+  - family-names: "Ratto"
+    given-names: "Matt"
+  - family-names: "Delgado"
+    given-names: "Myriam"
+  - family-names: "Minetto"
+    given-names: "Rodrigo"
+  - family-names: "Silver"
+    given-names: "Daniel"
+  - family-names: "Silva"
+    given-names: "Thiago H"
+version: "arXiv:2605.29064v2"
+date-released: 2026-08-07
+doi: "10.48550/arXiv.2605.29064"
+url: "https://arxiv.org/abs/2605.29064"
+preferred-citation:
+  type: article
+  title: "Persona Prompting in Multimodal Urban Perception: Descriptive Convergence and Interpretive Variation"
+  authors:
+    - family-names: "da Silva"
+      given-names: "Neemias"
+    - family-names: "Ratto"
+      given-names: "Matt"
+    - family-names: "Delgado"
+      given-names: "Myriam"
+    - family-names: "Minetto"
+      given-names: "Rodrigo"
+    - family-names: "Silver"
+      given-names: "Daniel"
+    - family-names: "Silva"
+      given-names: "Thiago H"
+  year: 2026
+  journal: "arXiv"
+  volume: "arXiv:2605.29064v2"
+  doi: "10.48550/arXiv.2605.29064"
+  url: "https://arxiv.org/abs/2605.29064"
