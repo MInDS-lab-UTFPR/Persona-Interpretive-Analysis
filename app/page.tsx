@@ -276,15 +276,15 @@ export default function Home() {
             <figure className="paper-figure results-figure">
               <img
                 src="paper/persona-effect-summary.svg"
-                width="1474"
-                height="571"
+                width="1336"
+                height="492"
                 loading="lazy"
-                alt="Two-panel dot plot comparing within-minus-cross similarity differences by persona dimension and output type for Qwen3-VL and Gemma4"
+                alt="Two-panel grouped bar chart comparing within-minus-cross similarity differences by persona dimension and output type for Qwen3-VL and Gemma4"
               />
               <figcaption>
-                <strong>Persona effect by dimension and modality.</strong> Points are
-                within-minus-cross means; bars are 95% BCa bootstrap confidence intervals
-                over 50 images. Captions and justifications use cosine similarity, while
+                <strong>Persona effect by dimension and modality.</strong> Bar length is
+                the within-minus-cross mean; whiskers are 95% BCa bootstrap confidence
+                intervals over 50 images. Captions and justifications use cosine similarity, while
                 perception tags use Jaccard similarity and are not directly comparable.
                 The gray ±0.01 band is an exploratory caption-effect reference, not an
                 equivalence threshold. In both models, justification differences exceed
