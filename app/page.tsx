@@ -156,6 +156,9 @@ export default function Home() {
             <a href="#cite">
               <b>BIB</b><span>Citation</span>
             </a>
+            <span className="action-pending">
+              <b>GIT</b><span>Code (soon)</span>
+            </span>
           </div>
         </div>
       </header>

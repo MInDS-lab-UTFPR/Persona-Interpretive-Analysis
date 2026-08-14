@@ -221,7 +221,8 @@ button {
   margin-top: 34px;
 }
 
-.paper-actions > a {
+.paper-actions > a,
+.paper-actions > .action-pending {
   min-width: 108px;
   min-height: 48px;
   display: inline-flex;
@@ -240,6 +241,20 @@ button {
   background: var(--link-dark);
   text-decoration: none;
   transform: translateY(-1px);
+}
+
+/* Release pending: the repository is announced but not yet linkable. */
+.paper-actions > .action-pending {
+  color: var(--muted);
+  background: transparent;
+  border: 1px dashed var(--line);
+  cursor: default;
+}
+
+.paper-actions > .action-pending b {
+  color: inherit;
+  border-color: currentColor;
+  opacity: 0.75;
 }
 
 .paper-actions b {
