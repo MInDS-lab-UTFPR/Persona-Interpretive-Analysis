@@ -53,6 +53,62 @@ test("server-renders the academic paper page", async () => {
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|Persona Lens/);
 });
 
+test("exposes the search-engine and scholar indexing surface", async () => {
+  const html = await (await render()).text();
+
+  /* Rich result previews: without these Google truncates snippets and
+     shrinks the social image to a thumbnail. */
+  assert.match(html, /max-image-preview:large/);
+  assert.match(html, /max-snippet:-1/);
+
+  /* Google Scholar reads citation_* to link the page to the paper record. */
+  assert.match(html, /citation_abstract_html_url/);
+  assert.match(html, /citation_keywords/);
+
+  /* One self-referencing canonical, so Pages and the bare repo URL do not
+     compete as duplicates. */
+  const canonicals = html.match(/rel="canonical"/g) ?? [];
+  assert.equal(canonicals.length, 1);
+  assert.match(
+    html,
+    /rel="canonical" href="https:\/\/neemiasbsilva\.github\.io\/Persona-Interpretive-Analysis-Portfolio\/"/,
+  );
+
+  const jsonLd = JSON.parse(
+    html.match(
+      /<script type="application\/ld\+json">(.*?)<\/script>/s,
+    )[1],
+  );
+  assert.equal(jsonLd["@type"], "ScholarlyArticle");
+  assert.match(jsonLd.abstract, /^This study examines how persona prompting/);
+  assert.equal(jsonLd.mainEntityOfPage["@id"], jsonLd.url);
+  assert.equal(jsonLd.author.length, 6);
+  assert.equal(jsonLd.author[0].affiliation.length, 2);
+
+  /* The indexed abstract must be the abstract on the page. */
+  const rendered = html
+    .match(/<h2>Abstract<\/h2><p>(.*?)<\/p>/s)[1]
+    .replace(/<[^>]+>/g, "")
+    .replace(/&#x27;/g, "'")
+    .replace(/&amp;/g, "&");
+  assert.equal(rendered, jsonLd.abstract);
+});
+
+test("sitemap and robots point crawlers at the canonical URL", async () => {
+  const [sitemap, robots] = await Promise.all([
+    readFile(new URL("../public/sitemap.xml", import.meta.url), "utf8"),
+    readFile(new URL("../public/robots.txt", import.meta.url), "utf8"),
+  ]);
+  const canonical =
+    "https://neemiasbsilva.github.io/Persona-Interpretive-Analysis-Portfolio/";
+
+  assert.match(sitemap, new RegExp(`<loc>${canonical}</loc>`));
+  assert.match(sitemap, /<lastmod>\d{4}-\d{2}-\d{2}<\/lastmod>/);
+  assert.match(robots, /Allow: \//);
+  assert.match(robots, new RegExp(`Sitemap: ${canonical}sitemap\\.xml`));
+  assert.doesNotMatch(robots, /Disallow: \/\s*$/m);
+});
+
 test("ships publication and citation assets", async () => {
   const [page, layout, packageJson, bibtex, citation, ogImage, ogSource] =
     await Promise.all([
