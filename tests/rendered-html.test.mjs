@@ -134,7 +134,8 @@ test("ships publication and citation assets", async () => {
   assert.equal(ogImage.subarray(1, 4).toString("ascii"), "PNG");
   assert.equal(ogImage.readUInt32BE(16), 1200);
   assert.equal(ogImage.readUInt32BE(20), 630);
-  assert.match(ogSource, /SHARED IMAGE \+ PERSONA PROFILES/);
+  assert.match(ogSource, /Same scene\. Same description\./);
+  assert.match(ogSource, /119,707 ANNOTATIONS/);
   await Promise.all([
     access(new URL("../public/og.png", import.meta.url)),
     access(new URL("../public/favicon.png", import.meta.url)),
