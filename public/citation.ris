@@ -1,6 +1,6 @@
-TY  - JOUR
+TY  - CPAPER
 TI  - Persona Prompting in Multimodal Urban Perception: Descriptive Convergence and Interpretive Variation
-AU  - da Silva, Neemias
+AU  - da Silva, Neemias B
 AU  - Ratto, Matt
 AU  - Delgado, Myriam
 AU  - Minetto, Rodrigo
@@ -8,8 +8,7 @@ AU  - Silver, Daniel
 AU  - Silva, Thiago H
 PY  - 2026
 DA  - 2026/08/07
-T2  - arXiv
-VL  - arXiv:2605.29064v2
+T2  - Workshop on Pluralistic AI & NLP: Diversity-aware, Sociotechnical, Responsible Alignment (PANDORA 2026)
 DO  - 10.48550/arXiv.2605.29064
 UR  - https://arxiv.org/abs/2605.29064
 ER  -

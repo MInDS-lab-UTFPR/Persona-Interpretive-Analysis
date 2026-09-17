@@ -4,7 +4,7 @@ title: "Persona Prompting in Multimodal Urban Perception: Descriptive Convergenc
 type: software
 authors:
   - family-names: "da Silva"
-    given-names: "Neemias"
+    given-names: "Neemias B"
   - family-names: "Ratto"
     given-names: "Matt"
   - family-names: "Delgado"
@@ -20,11 +20,11 @@ date-released: 2026-08-07
 doi: "10.48550/arXiv.2605.29064"
 url: "https://arxiv.org/abs/2605.29064"
 preferred-citation:
-  type: article
+  type: conference-paper
   title: "Persona Prompting in Multimodal Urban Perception: Descriptive Convergence and Interpretive Variation"
   authors:
     - family-names: "da Silva"
-      given-names: "Neemias"
+      given-names: "Neemias B"
     - family-names: "Ratto"
       given-names: "Matt"
     - family-names: "Delgado"
@@ -36,7 +36,6 @@ preferred-citation:
     - family-names: "Silva"
       given-names: "Thiago H"
   year: 2026
-  journal: "arXiv"
-  volume: "arXiv:2605.29064v2"
+  collection-title: "Workshop on Pluralistic AI & NLP: Diversity-aware, Sociotechnical, Responsible Alignment (PANDORA 2026)"
   doi: "10.48550/arXiv.2605.29064"
   url: "https://arxiv.org/abs/2605.29064"
