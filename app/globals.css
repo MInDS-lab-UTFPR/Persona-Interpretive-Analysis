@@ -299,8 +299,7 @@ button {
   margin-top: 1.125rem;
 }
 
-.paper-actions > a,
-.paper-actions > .action-pending {
+.paper-actions > a {
   min-width: 6.75rem;
   min-height: 2.5rem;
   display: inline-flex;
@@ -323,21 +322,6 @@ button {
   transform: translateY(-1px);
 }
 
-/* Release pending: the repository is announced but not yet linkable. */
-.paper-actions > .action-pending {
-  color: var(--muted);
-  background: transparent;
-  border: 1px dashed var(--line);
-  box-shadow: none;
-  cursor: default;
-}
-
-.paper-actions > .action-pending b {
-  color: inherit;
-  border-color: currentColor;
-  opacity: 0.75;
-}
-
 .paper-actions b {
   display: grid;
   place-items: center;
@@ -349,6 +333,16 @@ button {
   font-family: var(--font-geist-mono), monospace;
   font-size: 0.55rem;
   letter-spacing: -0.03em;
+}
+
+.paper-actions b.icon-github svg {
+  display: block;
+}
+
+.paper-actions b.icon-emoji {
+  font-family: initial;
+  font-size: 0.85rem;
+  letter-spacing: normal;
 }
 
 .paper-actions span {
@@ -868,8 +862,7 @@ button {
     gap: 3px;
   }
 
-  .paper-actions > a,
-  .paper-actions > .action-pending {
+  .paper-actions > a {
     min-width: 102px;
   }
 
