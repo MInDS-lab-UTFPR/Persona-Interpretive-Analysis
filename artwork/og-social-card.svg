@@ -18,7 +18,7 @@
   <rect x="800" y="0" width="400" height="8" fill="#76549c"/>
 
   <g font-family="Avenir Next, Helvetica Neue, Arial, sans-serif">
-    <text x="64" y="78" fill="#0c6864" font-size="13.5" font-weight="700" letter-spacing="2.1">ARXIV:2605.29064</text>
+    <text x="64" y="78" fill="#0c6864" font-size="13.5" font-weight="700" letter-spacing="2.1">EMNLP 2026 WORKSHOP PANDORA</text>
 
     <text x="64" y="174" fill="#172b35" font-family="Georgia, Times New Roman, serif" font-size="46" font-weight="400" letter-spacing="-1.35">
       <tspan x="64" dy="0">Persona Prompting in</tspan>
