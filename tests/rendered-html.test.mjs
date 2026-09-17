@@ -50,6 +50,9 @@ test("server-renders the academic paper page", async () => {
   assert.match(html, /href="https:\/\/pandora-workshop\.github\.io\/"/);
   assert.doesNotMatch(html, /arXiv preprint/);
   assert.doesNotMatch(html, /co-located/i);
+  /* The BibTeX \& escape lives in a template literal; a single backslash
+     would be dropped silently. */
+  assert.match(html, /Pluralistic AI \{\\&amp;\} NLP/);
   assert.match(html, /application\/ld\+json/);
   assert.match(
     html,
@@ -135,6 +138,10 @@ test("ships publication and citation assets", async () => {
   assert.match(layout, /Persona Prompting in Multimodal Urban Perception/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
   assert.match(bibtex, /@inproceedings\{silva2026persona,/);
+  assert.match(
+    bibtex,
+    /booktitle=\{EMNLP26 Workshop on Pluralistic AI \{\\&\} NLP: .*Alignment \(PANDORA\)\}/,
+  );
   assert.match(citation, /doi: "10\.48550\/arXiv\.2605\.29064"/);
   assert.equal(ogImage.subarray(1, 4).toString("ascii"), "PNG");
   assert.equal(ogImage.readUInt32BE(16), 1200);
