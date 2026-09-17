@@ -13,30 +13,29 @@
   </defs>
 
   <rect width="1200" height="630" fill="#ffffff"/>
-  <rect x="0" y="0" width="400" height="8" fill="#0c6864"/>
-  <rect x="400" y="0" width="400" height="8" fill="#c98923"/>
-  <rect x="800" y="0" width="400" height="8" fill="#76549c"/>
+  <rect x="0" y="0" width="600" height="8" fill="#2c3246"/>
+  <rect x="600" y="0" width="600" height="8" fill="#b8212c"/>
 
   <g font-family="Avenir Next, Helvetica Neue, Arial, sans-serif">
-    <text x="64" y="78" fill="#0c6864" font-size="13.5" font-weight="700" letter-spacing="2.1">EMNLP 2026 WORKSHOP PANDORA</text>
+    <text x="64" y="78" fill="#2c3246" font-size="13.5" font-weight="700" letter-spacing="2.1">EMNLP 2026 WORKSHOP PANDORA</text>
 
-    <text x="64" y="174" fill="#172b35" font-family="Georgia, Times New Roman, serif" font-size="46" font-weight="400" letter-spacing="-1.35">
+    <text x="64" y="174" fill="#2c3246" font-family="Georgia, Times New Roman, serif" font-size="46" font-weight="400" letter-spacing="-1.35">
       <tspan x="64" dy="0">Persona Prompting in</tspan>
       <tspan x="64" dy="56">Multimodal Urban</tspan>
       <tspan x="64" dy="56">Perception</tspan>
     </text>
 
-    <rect x="64" y="366" width="4" height="82" fill="#76549c"/>
-    <text x="90" y="398" fill="#41545d" font-size="26" font-weight="500">Same scene. Same description.</text>
-    <text x="90" y="436" fill="#76549c" font-size="26" font-weight="700">Different interpretation.</text>
+    <rect x="64" y="366" width="4" height="82" fill="#b8212c"/>
+    <text x="90" y="398" fill="#5f6368" font-size="26" font-weight="500">Same scene. Same description.</text>
+    <text x="90" y="436" fill="#b8212c" font-size="26" font-weight="700">Different interpretation.</text>
 
-    <text x="243" y="574" fill="#172b35" font-size="16" font-weight="700" letter-spacing="1.2" text-anchor="middle">119,707 ANNOTATIONS</text>
-    <text x="600" y="574" fill="#172b35" font-size="16" font-weight="700" letter-spacing="1.2" text-anchor="middle">24 PERSONAS</text>
-    <text x="957" y="574" fill="#172b35" font-size="16" font-weight="700" letter-spacing="1.2" text-anchor="middle">2 MLLMs</text>
+    <text x="243" y="574" fill="#2c3246" font-size="16" font-weight="700" letter-spacing="1.2" text-anchor="middle">119,707 ANNOTATIONS</text>
+    <text x="600" y="574" fill="#2c3246" font-size="16" font-weight="700" letter-spacing="1.2" text-anchor="middle">24 PERSONAS</text>
+    <text x="957" y="574" fill="#2c3246" font-size="16" font-weight="700" letter-spacing="1.2" text-anchor="middle">2 MLLMs</text>
   </g>
 
-  <line x1="520" y1="64" x2="520" y2="502" stroke="#e7ebed" stroke-width="1"/>
-  <line x1="64" y1="530" x2="1136" y2="530" stroke="#dfe5e7" stroke-width="1"/>
+  <line x1="520" y1="64" x2="520" y2="502" stroke="#dadce0" stroke-width="1"/>
+  <line x1="64" y1="530" x2="1136" y2="530" stroke="#dadce0" stroke-width="1"/>
 
   <g clip-path="url(#diagram-crop)">
     <image x="0" y="0" width="1731" height="909" transform="translate(282.8, 78.6) scale(0.51)" xlink:href="og-scientific-flow.png"/>
