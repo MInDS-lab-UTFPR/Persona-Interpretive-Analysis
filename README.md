@@ -9,6 +9,8 @@ Alignment (PANDORA 2026)](https://pandora-workshop.github.io/).
 - Paper: <https://arxiv.org/abs/2605.29064>
 - PDF: <https://arxiv.org/pdf/2605.29064>
 - DOI: <https://doi.org/10.48550/arXiv.2605.29064>
+- Code: <https://github.com/MInDS-lab-UTFPR/Persona-Interpretive-Analysis> ([mirror](https://github.com/neemiasbsilva/Persona-Interpretive-Analysis))
+- Dataset: <https://huggingface.co/datasets/MInDS-lab-UTFPR/UrbanPersona-120K-Interpretive>
 
 ## Local development
 
