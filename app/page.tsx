@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     siteName: "Persona Prompting in Multimodal Urban Perception",
     locale: "en_US",
     publishedTime: "2026-05-27",
-    modifiedTime: "2026-08-07",
+    modifiedTime: "2026-09-16",
     images: [
       {
         url: `${siteUrl}og.png`,
@@ -129,7 +129,7 @@ export default function Home() {
         })),
     })),
     datePublished: "2026-05-27",
-    dateModified: "2026-08-07",
+    dateModified: "2026-09-16",
     identifier: [
       "arXiv:2605.29064",
       "https://doi.org/10.48550/arXiv.2605.29064",
