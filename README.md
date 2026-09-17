@@ -1,7 +1,9 @@
 # Persona Prompting in Multimodal Urban Perception
 
 Project website for **“Persona Prompting in Multimodal Urban Perception:
-Descriptive Convergence and Interpretive Variation.”**
+Descriptive Convergence and Interpretive Variation,”** accepted at the
+[Workshop on Pluralistic AI & NLP: Diversity-aware, Sociotechnical, Responsible
+Alignment (PANDORA 2026)](https://pandora-workshop.github.io/).
 
 - Website: <https://neemiasbsilva.github.io/Persona-Interpretive-Analysis-Portfolio/>
 - Paper: <https://arxiv.org/abs/2605.29064>
