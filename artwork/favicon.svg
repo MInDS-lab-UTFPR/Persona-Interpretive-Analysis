@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <title>Favicon for Persona Prompting in Multimodal Urban Perception</title>
+
+  <!-- A P for the PANDORA workshop on a tile that turns from EMNLP 2026 navy
+       to red, as the page title does. Every straight edge sits on a 32-unit
+       grid, one pixel at 16 x 16, so the tab icon stays crisp. The red field
+       starts under the navy one so no seam shows between them. -->
+  <path d="M192 0H416A96 96 0 0 1 512 96V416A96 96 0 0 1 416 512H192Z" fill="#b8212c"/>
+  <path d="M224 0V512H96A96 96 0 0 1 0 416V96A96 96 0 0 1 96 0Z" fill="#2c3246"/>
+  <path d="M160 96H320A64 64 0 0 1 384 160V256A64 64 0 0 1 320 320H224V416H160ZM224 160V256H320V160Z" fill="#ffffff" fill-rule="evenodd"/>
+</svg>
