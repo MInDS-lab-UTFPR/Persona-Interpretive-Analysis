@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   other: {
     citation_title: fullTitle,
     citation_author: [
-      "Neemias da Silva",
+      "Neemias B da Silva",
       "Matt Ratto",
       "Myriam Delgado",
       "Rodrigo Minetto",
@@ -102,7 +102,7 @@ const affiliationNames: Record<string, string> = {
 };
 
 const authors = [
-  ["Neemias da Silva", "1,2"],
+  ["Neemias B da Silva", "1,2"],
   ["Matt Ratto", "1"],
   ["Myriam Delgado", "2"],
   ["Rodrigo Minetto", "2"],

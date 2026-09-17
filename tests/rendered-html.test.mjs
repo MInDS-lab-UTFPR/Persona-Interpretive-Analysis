@@ -34,7 +34,7 @@ test("server-renders the academic paper page", async () => {
     /<title>Persona Prompting in Multimodal Urban Perception: Descriptive Convergence and Interpretive Variation<\/title>/i,
   );
   assert.match(html, /Descriptive Convergence and Interpretive Variation/);
-  assert.match(html, /Neemias da Silva/);
+  assert.match(html, /Neemias B da Silva/);
   assert.match(html, /Qwen3-VL-8B/);
   assert.match(html, /Gemma-4-E4B-it/);
   assert.match(html, /Federal University of Technology – Parana \(UTFPR\), Brazil/);

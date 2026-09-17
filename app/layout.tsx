@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "A research project on how persona prompting changes interpretive framing more than descriptive grounding in multimodal urban perception.",
   applicationName: "Persona Prompting in Multimodal Urban Perception",
   authors: [
-    { name: "Neemias da Silva" },
+    { name: "Neemias B da Silva" },
     { name: "Matt Ratto" },
     { name: "Myriam Delgado" },
     { name: "Rodrigo Minetto" },
