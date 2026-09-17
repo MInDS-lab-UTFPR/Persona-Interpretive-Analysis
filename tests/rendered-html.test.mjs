@@ -45,6 +45,7 @@ test("server-renders the academic paper page", async () => {
   assert.match(html, /citation_date/);
   assert.match(html, /citation_online_date/);
   assert.match(html, /citation_doi/);
+  assert.match(html, /citation_conference_title/);
   assert.match(html, /class="paper-status">EMNLP 2026 Workshop PANDORA</);
   assert.match(html, /href="https:\/\/pandora-workshop\.github\.io\/"/);
   assert.doesNotMatch(html, /arXiv preprint/);
