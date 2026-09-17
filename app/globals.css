@@ -312,6 +312,17 @@ button {
   text-align: center;
 }
 
+.paper-section h2::after,
+.section-intro h2::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 3px;
+  margin: 16px auto 0;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
 .overview-section {
   padding-top: 24px;
   padding-bottom: 58px;
@@ -557,6 +568,10 @@ button {
   background: #fffaf2;
   border: 1px solid #ead7b7;
   border-left: 5px solid #c9822e;
+}
+
+.ethics-note h2::after {
+  content: none;
 }
 
 .ethics-note h2 {
