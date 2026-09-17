@@ -2,14 +2,12 @@
 
 import { useState } from "react";
 
-const bibtex = `@misc{dasilva2026personapromptingmultimodalurban,
+/* Template literal: the BibTeX escape \& must be written \\& to survive. */
+const bibtex = `@inproceedings{silva2026persona,
   title={Persona Prompting in Multimodal Urban Perception: Descriptive Convergence and Interpretive Variation},
-  author={Neemias da Silva and Matt Ratto and Myriam Delgado and Rodrigo Minetto and Daniel Silver and Thiago H Silva},
+  author={Neemias Buceli da Silva and Matt Ratto and Myriam Delgado and Rodrigo Minetto and Daniel Silver and Thiago H. Silva},
+  booktitle={EMNLP26 Workshop on Pluralistic AI {\\&} NLP: Diversity-aware, Sociotechnical, Responsible Alignment (PANDORA)},
   year={2026},
-  eprint={2605.29064},
-  archivePrefix={arXiv},
-  primaryClass={cs.CL},
-  url={https://arxiv.org/abs/2605.29064}
 }`;
 
 export function CitationBlock() {

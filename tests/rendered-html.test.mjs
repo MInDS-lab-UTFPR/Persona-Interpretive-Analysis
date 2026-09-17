@@ -134,7 +134,7 @@ test("ships publication and citation assets", async () => {
   assert.match(page, /ScholarlyArticle/);
   assert.match(layout, /Persona Prompting in Multimodal Urban Perception/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
-  assert.match(bibtex, /eprint=\{2605\.29064\}/);
+  assert.match(bibtex, /@inproceedings\{silva2026persona,/);
   assert.match(citation, /doi: "10\.48550\/arXiv\.2605\.29064"/);
   assert.equal(ogImage.subarray(1, 4).toString("ascii"), "PNG");
   assert.equal(ogImage.readUInt32BE(16), 1200);
