@@ -775,6 +775,33 @@ button {
   color: #ffd9dc;
 }
 
+/* Wide screens: the table and its findings sit side by side, so the full
+   column is used without stretching lines of text. The grid places the
+   section's children in markup order: intro, table, findings, figure. */
+@media (min-width: 68.75em) {
+  .results-section .content-wide {
+    display: grid;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    column-gap: clamp(2.5rem, 4vw, 4.5rem);
+    align-items: center;
+  }
+
+  .results-section .section-intro,
+  .results-figure {
+    grid-column: 1 / -1;
+  }
+
+  .model-comparison,
+  .result-list {
+    max-width: none;
+    margin: 0;
+  }
+
+  .results-figure {
+    margin-top: 3.875rem;
+  }
+}
+
 @media (max-width: 760px) {
   .content-wide,
   .content-narrow,
