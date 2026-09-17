@@ -7,10 +7,14 @@
   --soft-line: #e8eaed;
   --surface: #f6f7f8;
   --paper: #ffffff;
+  /* Navy is sampled from the EMNLP 2026 wordmark, where the paper is presented
+     (PANDORA workshop); red is its logo red #d12632 taken a step darker. */
+  --ink: #2c3246;
   --link: #2767b1;
   --link-dark: #174a84;
-  --accent: #0c6864;
-  --accent-soft: #e7f2f1;
+  --accent: #b8212c;
+  --accent-deep: #8f1a23;
+  --accent-soft: #faeaeb;
   --warm: #f3efe5;
   --coral: #d95f4b;
 }
@@ -32,6 +36,10 @@ body {
   font-size: 16px;
   line-height: 1.6;
   text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(184, 33, 44, 0.16);
 }
 
 a {
@@ -432,6 +440,11 @@ button {
 
 .highlight-row {
   background: var(--accent-soft);
+}
+
+/* Deeper red keeps the numbers at least as legible on the tint as on white. */
+.model-comparison .highlight-row td {
+  color: var(--accent-deep);
 }
 
 .result-list {
