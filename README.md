@@ -51,3 +51,12 @@ git push -u origin main
 Ready-to-import citation files are available as
 [`public/citation.bib`](public/citation.bib),
 [`public/citation.ris`](public/citation.ris), and [`CITATION.cff`](CITATION.cff).
+
+```bibtex
+@inproceedings{silva2026persona,
+      title={Persona Prompting in Multimodal Urban Perception: Descriptive Convergence and Interpretive Variation},
+      author={Neemias Buceli da Silva and Matt Ratto and Myriam Delgado and Rodrigo Minetto and Daniel Silver and Thiago H. Silva},
+      booktitle={EMNLP26 Workshop on Pluralistic AI {\&} NLP: Diversity-aware, Sociotechnical, Responsible Alignment (PANDORA)},
+      year={2026},
+}
+```
