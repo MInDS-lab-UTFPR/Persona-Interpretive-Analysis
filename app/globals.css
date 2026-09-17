@@ -125,6 +125,8 @@ button {
   padding: 0 max(24px, calc((100vw - 1050px) / 2));
   background: rgba(255, 255, 255, 0.96);
   border-bottom: 1px solid var(--soft-line);
+  /* Inset so the red venue strip does not change the nav height. */
+  box-shadow: inset 0 3px 0 var(--accent);
   backdrop-filter: blur(12px);
 }
 
@@ -157,7 +159,7 @@ button {
 }
 
 .nav-sections a:hover {
-  color: var(--link);
+  color: var(--accent-deep);
 }
 
 /* Hero is kept compact so the overview figure breaks the fold on a laptop. */
