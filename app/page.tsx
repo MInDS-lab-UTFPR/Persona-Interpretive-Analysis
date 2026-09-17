@@ -170,7 +170,7 @@ export default function Home() {
 
       <header className="paper-hero" id="top">
         <div className="content-narrow">
-          <p className="paper-status">arXiv preprint · 2605.29064v2</p>
+          <p className="paper-status">EMNLP 2026 Workshop PANDORA</p>
           <h1>
             Persona Prompting in Multimodal Urban Perception:
             <span> Descriptive Convergence and Interpretive Variation</span>
