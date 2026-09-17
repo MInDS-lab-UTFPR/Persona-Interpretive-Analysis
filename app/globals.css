@@ -607,7 +607,8 @@ button {
   overflow: hidden;
   background: white;
   border: 1px solid var(--line);
-  border-radius: 4px;
+  border-radius: 6px;
+  box-shadow: 0 12px 28px -20px rgba(44, 50, 70, 0.35);
 }
 
 .citation-toolbar {
@@ -622,10 +623,21 @@ button {
 }
 
 .citation-toolbar > span {
-  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink);
   font-family: var(--font-geist-mono), monospace;
   font-size: 0.66rem;
   font-weight: 700;
+}
+
+.citation-toolbar > span::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background: var(--accent);
+  border-radius: 2px;
 }
 
 .citation-toolbar > div {
@@ -638,7 +650,7 @@ button {
 .citation-toolbar button {
   min-height: 30px;
   padding: 0 11px;
-  color: var(--link);
+  color: var(--ink);
   background: white;
   border: 1px solid var(--line);
   border-radius: 3px;
@@ -646,11 +658,18 @@ button {
   font-size: 0.66rem;
   font-weight: 650;
   text-decoration: none;
+  transition: color 150ms ease, border-color 150ms ease;
 }
 
 .citation-toolbar a {
   display: inline-flex;
   align-items: center;
+}
+
+.citation-toolbar a:hover,
+.citation-toolbar button:hover {
+  color: var(--accent-deep);
+  border-color: rgba(184, 33, 44, 0.45);
 }
 
 .citation-block pre {
