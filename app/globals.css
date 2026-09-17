@@ -1,6 +1,15 @@
 @import "tailwindcss";
 
 :root {
+  /* One fluid column for the nav and every block (figures, table and
+     findings, stats, citation), so left and right edges line up down the
+     page. It grows to 84rem inside a fluid gutter; 100% rather than 100vw
+     keeps the nav and content aligned beside a classic scrollbar. Running
+     text is held to --measure inside the column so lines stay readable. */
+  --gutter: clamp(16px, 4vw, 72px);
+  --column: 84rem;
+  --wide: min(var(--column), 100% - 2 * var(--gutter));
+  --measure: 64ch;
   --text: #202124;
   --muted: #5f6368;
   --line: #dadce0;
@@ -89,18 +98,15 @@ button {
   transform: translateY(0);
 }
 
-.content-wide {
-  width: min(65.625rem, calc(100vw - 48px));
+.content-wide,
+.content-reading {
+  width: var(--wide);
   margin-inline: auto;
 }
 
+/* The hero is centred text, so its box only sets where lines wrap. */
 .content-narrow {
   width: min(61.25rem, calc(100vw - 48px));
-  margin-inline: auto;
-}
-
-.content-reading {
-  width: min(51.25rem, calc(100vw - 48px));
   margin-inline: auto;
 }
 
@@ -126,7 +132,7 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  padding: 0 max(24px, calc((100vw - 65.625rem) / 2));
+  padding: 0 max(var(--gutter), (100% - var(--column)) / 2);
   background: rgba(255, 255, 255, 0.96);
   border-bottom: 1px solid var(--soft-line);
   /* Inset so the red venue strip does not change the nav height. */
@@ -397,7 +403,8 @@ button {
 }
 
 .paper-figure figcaption {
-  max-width: 57.5rem;
+  max-width: 72ch;
+  text-wrap: balance;
   margin: 1.25rem auto 0;
   color: var(--muted);
   font-size: 0.78rem;
@@ -410,7 +417,7 @@ button {
 }
 
 .overview-figure img {
-  width: min(100%, 62.5rem);
+  width: 100%;
 }
 
 .abstract-section {
@@ -420,7 +427,8 @@ button {
 }
 
 .abstract-section p {
-  margin: 0;
+  max-width: var(--measure);
+  margin: 0 auto;
   color: #3c4043;
   font-size: 0.98rem;
   line-height: 1.85;
@@ -428,7 +436,6 @@ button {
 }
 
 .section-intro {
-  max-width: 48.75rem;
   margin: 0 auto 2.5rem;
   text-align: center;
 }
@@ -438,7 +445,9 @@ button {
 }
 
 .section-intro p {
-  margin: 0;
+  max-width: var(--measure);
+  text-wrap: balance;
+  margin: 0 auto;
   color: var(--muted);
   font-size: 0.95rem;
 }
@@ -560,7 +569,7 @@ button {
 }
 
 .results-figure img {
-  width: min(100%, 62.5rem);
+  width: 100%;
   object-fit: contain;
 }
 
@@ -573,8 +582,7 @@ button {
 .study-numbers {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  max-width: 56.25rem;
-  margin: 2.25rem auto 2.625rem;
+  margin: 2.25rem 0 2.625rem;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -610,7 +618,7 @@ button {
 }
 
 .method-summary {
-  max-width: 51.25rem;
+  max-width: var(--measure);
   margin: 0 auto;
   color: #3c4043;
   font-size: 0.9rem;
@@ -622,7 +630,9 @@ button {
   padding-bottom: 3.5rem;
 }
 
+/* The note hugs its --measure paragraph instead of spanning the column. */
 .ethics-note {
+  width: fit-content;
   padding: 1.875rem 2.125rem;
   background: #fffaf2;
   border: 1px solid #ead7b7;
@@ -643,6 +653,7 @@ button {
 }
 
 .ethics-note p {
+  max-width: var(--measure);
   margin: 0;
   color: #514633;
   font-size: 0.82rem;
@@ -656,8 +667,6 @@ button {
 }
 
 .citation-block {
-  max-width: 56.25rem;
-  margin: 0 auto;
   overflow: hidden;
   background: white;
   border: 1px solid var(--line);
@@ -771,6 +780,15 @@ button {
   .content-narrow,
   .content-reading {
     width: min(100% - 30px, 680px);
+  }
+
+  /* The phone column is already a comfortable measure. */
+  .abstract-section p,
+  .section-intro p,
+  .paper-figure figcaption,
+  .method-summary,
+  .ethics-note p {
+    max-width: none;
   }
 
   .academic-nav {
