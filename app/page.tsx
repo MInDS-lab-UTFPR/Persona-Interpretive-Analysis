@@ -175,7 +175,13 @@ export default function Home() {
 
       <header className="paper-hero" id="top">
         <div className="content-narrow">
-          <p className="paper-status">EMNLP 2026 Workshop PANDORA</p>
+          <p className="paper-status">
+            <span className="paper-status-venue">EMNLP 2026</span>{" "}
+            <span className="paper-status-event">
+              <span className="paper-status-kind">Workshop</span>{" "}
+              <span className="paper-status-name">PANDORA</span>
+            </span>
+          </p>
           <h1>
             Persona Prompting in Multimodal Urban Perception:
             <span> Descriptive Convergence and Interpretive Variation</span>

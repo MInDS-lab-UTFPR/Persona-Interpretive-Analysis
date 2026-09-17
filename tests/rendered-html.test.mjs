@@ -46,7 +46,12 @@ test("server-renders the academic paper page", async () => {
   assert.match(html, /citation_online_date/);
   assert.match(html, /citation_doi/);
   assert.match(html, /citation_conference_title/);
-  assert.match(html, /class="paper-status">EMNLP 2026 Workshop PANDORA</);
+  /* The lockup splits the venue across spans; the spaces between them are
+     what keep a screen reader from announcing "EMNLP 2026Workshop". */
+  const venueLabel = html
+    .match(/<p class="paper-status">(.*?)<\/p>/s)[1]
+    .replace(/<[^>]+>/g, "");
+  assert.equal(venueLabel, "EMNLP 2026 Workshop PANDORA");
   assert.match(html, /href="https:\/\/pandora-workshop\.github\.io\/"/);
   assert.doesNotMatch(html, /arXiv preprint/);
   assert.doesNotMatch(html, /co-located/i);

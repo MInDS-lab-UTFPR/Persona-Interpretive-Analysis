@@ -170,14 +170,64 @@ button {
   border-bottom: 1px solid var(--soft-line);
 }
 
+/* Venue lockup: the conference, a hairline, then the workshop. The square
+   mark is the page's own bullet motif rather than a copy of the EMNLP logo. */
 .paper-status {
-  margin: 0 0 18px;
-  color: var(--accent);
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 0.7rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px 10px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 18px;
+  color: var(--ink);
+  font-size: 0.88rem;
   font-weight: 700;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+.paper-status::before {
+  content: "";
+  align-self: center;
+  width: 9px;
+  height: 9px;
+  flex: none;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.paper-status-venue {
+  letter-spacing: 0.04em;
+}
+
+.paper-status-event {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+/* In flow, so the hairline tracks the text under zoom and fallback fonts. */
+.paper-status-event::before {
+  content: "";
+  align-self: center;
+  width: 1px;
+  height: 1em;
+  margin-right: 8px;
+  background: rgba(95, 99, 104, 0.4);
+}
+
+.paper-status-kind {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* The negative margin cancels the trailing tracking so the lockup centres. */
+.paper-status-name {
+  margin-right: -0.12em;
+  color: var(--accent);
+  font-size: 0.9em;
+  letter-spacing: 0.12em;
 }
 
 .paper-hero h1 {
@@ -796,6 +846,18 @@ button {
   .citation-block pre {
     padding: 20px 15px;
     font-size: 0.62rem;
+  }
+}
+
+/* Keeps the venue lockup on one line on the narrowest phones. */
+@media (max-width: 359px) {
+  .paper-status {
+    gap: 4px 8px;
+    font-size: 0.78rem;
+  }
+
+  .paper-status-event::before {
+    margin-right: 5px;
   }
 }
 
