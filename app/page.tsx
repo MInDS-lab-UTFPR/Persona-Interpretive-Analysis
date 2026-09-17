@@ -15,6 +15,9 @@ const pdfUrl = "https://arxiv.org/pdf/2605.29064";
 const doiUrl = "https://doi.org/10.48550/arXiv.2605.29064";
 const fullTitle =
   "Persona Prompting in Multimodal Urban Perception: Descriptive Convergence and Interpretive Variation";
+const venue =
+  "Workshop on Pluralistic AI & NLP: Diversity-aware, Sociotechnical, Responsible Alignment (PANDORA 2026)";
+const workshopUrl = "https://pandora-workshop.github.io/";
 
 export const metadata: Metadata = {
   title: fullTitle,
@@ -370,7 +373,9 @@ export default function Home() {
             <div className="section-intro">
               <h2>Citation</h2>
               <p>
-                If this work informs your research, please cite the arXiv preprint.
+                If this work informs your research, please cite our paper at
+                the{" "}
+                <a href={workshopUrl} target="_blank" rel="noreferrer">{venue}</a>.
               </p>
             </div>
             <CitationBlock />
@@ -380,9 +385,8 @@ export default function Home() {
 
       <footer className="academic-footer">
         <div className="content-wide">
-          <p>
-            Persona Prompting in Multimodal Urban Perception · arXiv:2605.29064v2
-          </p>
+          <p>Persona Prompting in Multimodal Urban Perception</p>
+          <p>{venue}</p>
           <p>
             Correspondence: <a href="mailto:neemias.buceli@mail.utoronto.ca">neemias.buceli@mail.utoronto.ca</a>
           </p>
