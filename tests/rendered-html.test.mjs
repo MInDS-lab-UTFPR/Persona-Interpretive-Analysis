@@ -154,6 +154,18 @@ test("ships publication and citation assets", async () => {
   assert.match(ogSource, /Same scene\. Same description\./);
   assert.match(ogSource, /119,707 ANNOTATIONS/);
   assert.match(ogSource, />EMNLP 2026 WORKSHOP PANDORA</);
+
+  /* The favicon is drawn in artwork/favicon.svg in the venue's navy and red
+     and served as a 512 x 512 render. */
+  const [favicon, faviconSource] = await Promise.all([
+    readFile(new URL("../public/favicon.png", import.meta.url)),
+    readFile(new URL("../artwork/favicon.svg", import.meta.url), "utf8"),
+  ]);
+  assert.equal(favicon.subarray(1, 4).toString("ascii"), "PNG");
+  assert.equal(favicon.readUInt32BE(16), 512);
+  assert.equal(favicon.readUInt32BE(20), 512);
+  assert.match(faviconSource, /fill="#2c3246"/);
+  assert.match(faviconSource, /fill="#b8212c"/);
   await Promise.all([
     access(new URL("../public/og.png", import.meta.url)),
     access(new URL("../public/favicon.png", import.meta.url)),
