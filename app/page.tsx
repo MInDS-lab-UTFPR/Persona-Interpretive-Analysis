@@ -13,7 +13,7 @@ const siteUrl =
 const paperUrl = "https://arxiv.org/abs/2605.29064";
 const pdfUrl = "https://arxiv.org/pdf/2605.29064";
 const doiUrl = "https://doi.org/10.48550/arXiv.2605.29064";
-const codeUrl = "https://github.com/MInDS-lab-UTFPR/Persona-Interpretive-Analysis";
+const codeUrl = "https://github.com/neemiasbsilva/Persona-Interpretive-Analysis";
 const datasetUrl =
   "https://huggingface.co/datasets/MInDS-lab-UTFPR/UrbanPersona-120K-Interpretive";
 const fullTitle =
