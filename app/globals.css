@@ -181,8 +181,8 @@ button {
   border-bottom: 1px solid var(--soft-line);
 }
 
-/* Venue lockup: the conference, a hairline, then the workshop. The square
-   mark is the page's own bullet motif rather than a copy of the EMNLP logo. */
+/* Venue lockup: the conference, a hairline, then the workshop. The mark is
+   the EMNLP 2026 logo's, redrawn from its rectangles and set in the accent. */
 .paper-status {
   display: flex;
   flex-wrap: wrap;
@@ -198,14 +198,13 @@ button {
   line-height: 1.4;
 }
 
-.paper-status::before {
-  content: "";
+/* Cap height tall; the width keeps the logo's 2272 x 1492 proportions. */
+.paper-status-mark {
   align-self: center;
-  width: 0.5625rem;
-  height: 0.5625rem;
+  width: 1.1422em;
+  height: 0.75em;
   flex: none;
-  background: var(--accent);
-  border-radius: 2px;
+  fill: var(--accent);
 }
 
 .paper-status-venue {

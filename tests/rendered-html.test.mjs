@@ -52,6 +52,9 @@ test("server-renders the academic paper page", async () => {
     .match(/<p class="paper-status">(.*?)<\/p>/s)[1]
     .replace(/<[^>]+>/g, "");
   assert.equal(venueLabel, "EMNLP 2026 Workshop PANDORA");
+  /* The lockup opens with the EMNLP 2026 mark, drawn inline and hidden from
+     screen readers since the text already names the venue. */
+  assert.match(html, /<p class="paper-status"><svg class="paper-status-mark"[^>]*aria-hidden="true"/);
   assert.match(html, /href="https:\/\/pandora-workshop\.github\.io\/"/);
   assert.doesNotMatch(html, /arXiv preprint/);
   assert.doesNotMatch(html, /co-located/i);

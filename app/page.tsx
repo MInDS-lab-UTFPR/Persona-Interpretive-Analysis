@@ -179,6 +179,18 @@ export default function Home() {
       <header className="paper-hero" id="top">
         <div className="content-narrow">
           <p className="paper-status">
+            <svg
+              className="paper-status-mark"
+              viewBox="0 0 2272 1492"
+              width="16"
+              height="11"
+              aria-hidden="true"
+            >
+              <path
+                fillRule="evenodd"
+                d="M1403 0H1904V1006H2272V1492H0V98H1403ZM502 584H1403V1006H502Z"
+              />
+            </svg>
             <span className="paper-status-venue">EMNLP 2026</span>{" "}
             <span className="paper-status-event">
               <span className="paper-status-kind">Workshop</span>{" "}
