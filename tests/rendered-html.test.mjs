@@ -151,9 +151,10 @@ test("ships publication and citation assets", async () => {
   assert.equal(ogImage.subarray(1, 4).toString("ascii"), "PNG");
   assert.equal(ogImage.readUInt32BE(16), 1200);
   assert.equal(ogImage.readUInt32BE(20), 630);
-  assert.match(ogSource, /Same scene\. Same description\./);
-  assert.match(ogSource, /119,707 ANNOTATIONS/);
   assert.match(ogSource, />EMNLP 2026 WORKSHOP PANDORA</);
+  assert.match(ogSource, /fill="#d12632"/);
+  assert.match(ogSource, /xlink:href="og-scientific-flow\.png"/);
+  assert.match(ogSource, />Persona Prompting in Multimodal Urban Perception:</);
 
   /* The favicon is drawn in artwork/favicon.svg in the venue's navy and red
      and served as a 512 x 512 render. */

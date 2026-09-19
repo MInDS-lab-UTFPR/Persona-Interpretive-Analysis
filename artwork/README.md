@@ -1,6 +1,6 @@
 # Social preview artwork
 
-`og-social-card.svg` is the editable 1200 × 630 source for the paper's Open Graph preview. It composes exact, deterministic typography over `og-scientific-flow.png`, a supporting scientific illustration generated with OpenAI ImageGen.
+`og-social-card.svg` is the editable 1200 × 630 source for the paper's Open Graph preview. It stacks the EMNLP 2026 mark (redrawn as a vector from the conference logo, the same path the page's hero uses) beside the venue label, the paper's title in exact, deterministic type, and `og-scientific-flow.png`, a scientific illustration generated with OpenAI ImageGen that the card crops to the diagram alone.
 
 Render the published PNG from this directory with:
 

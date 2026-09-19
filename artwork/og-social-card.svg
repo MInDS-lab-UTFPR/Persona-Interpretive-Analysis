@@ -1,43 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="630" viewBox="0 0 1200 630">
   <title>Social preview for Persona Prompting in Multimodal Urban Perception</title>
-  <desc>A scientific presentation graphic showing multiple personas analyzing the same urban scene, with descriptions converging and interpretations diverging.</desc>
+  <desc>The EMNLP 2026 mark and the venue label above the paper's title and a scientific diagram of multiple personas analyzing the same urban scene, with descriptions converging and interpretations diverging.</desc>
 
   <!-- Supporting illustration generated with OpenAI ImageGen, then composed here
-       with deterministic typography so the scholarly title and study facts remain exact.
-       The card carries only what a feed-sized thumbnail can actually deliver:
-       the title, the finding in one breath, the scale of the study, and the figure. -->
+       with deterministic typography so the venue label and title remain exact.
+       The card carries the venue, the paper's title set as the page's hero
+       sets it, and the figure drawn large enough to read at feed size. -->
   <defs>
     <clipPath id="diagram-crop">
-      <rect x="548" y="150" width="612" height="306"/>
+      <rect x="185" y="187" width="830" height="408"/>
     </clipPath>
   </defs>
 
   <rect width="1200" height="630" fill="#ffffff"/>
-  <rect x="0" y="0" width="600" height="8" fill="#2c3246"/>
-  <rect x="600" y="0" width="600" height="8" fill="#b8212c"/>
 
-  <g font-family="Avenir Next, Helvetica Neue, Arial, sans-serif">
-    <text x="64" y="78" fill="#2c3246" font-size="13.5" font-weight="700" letter-spacing="2.1">EMNLP 2026 WORKSHOP PANDORA</text>
+  <!-- The EMNLP 2026 mark in its logo red, redrawn from the rectangles of the
+       conference logo (2272 x 1492 logo px) and set to 22px tall. -->
+  <path transform="translate(341.25, 40) scale(0.014745)" fill="#d12632" fill-rule="evenodd" d="M1403 0H1904V1006H2272V1492H0V98H1403ZM502 584H1403V1006H502Z"/>
+  <text x="385.75" y="59" fill="#2c3246" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="2.93">EMNLP 2026 WORKSHOP PANDORA</text>
 
-    <text x="64" y="174" fill="#2c3246" font-family="Georgia, Times New Roman, serif" font-size="46" font-weight="400" letter-spacing="-1.35">
-      <tspan x="64" dy="0">Persona Prompting in</tspan>
-      <tspan x="64" dy="56">Multimodal Urban</tspan>
-      <tspan x="64" dy="56">Perception</tspan>
-    </text>
-
-    <rect x="64" y="366" width="4" height="82" fill="#b8212c"/>
-    <text x="90" y="398" fill="#5f6368" font-size="26" font-weight="500">Same scene. Same description.</text>
-    <text x="90" y="436" fill="#b8212c" font-size="26" font-weight="700">Different interpretation.</text>
-
-    <text x="243" y="574" fill="#2c3246" font-size="16" font-weight="700" letter-spacing="1.2" text-anchor="middle">119,707 ANNOTATIONS</text>
-    <text x="600" y="574" fill="#2c3246" font-size="16" font-weight="700" letter-spacing="1.2" text-anchor="middle">24 PERSONAS</text>
-    <text x="957" y="574" fill="#2c3246" font-size="16" font-weight="700" letter-spacing="1.2" text-anchor="middle">2 MLLMs</text>
-  </g>
-
-  <line x1="520" y1="64" x2="520" y2="502" stroke="#dadce0" stroke-width="1"/>
-  <line x1="64" y1="530" x2="1136" y2="530" stroke="#dadce0" stroke-width="1"/>
+  <text fill="#2c3246" font-family="Georgia, Times New Roman, serif" font-size="36" font-weight="700" letter-spacing="-0.72" text-anchor="middle">
+    <tspan x="605.5" y="113">Persona Prompting in Multimodal Urban Perception:</tspan>
+    <tspan x="600" y="156" fill="#9c1b25">Descriptive Convergence and Interpretive Variation</tspan>
+  </text>
 
   <g clip-path="url(#diagram-crop)">
-    <image x="0" y="0" width="1731" height="909" transform="translate(282.8, 78.6) scale(0.51)" xlink:href="og-scientific-flow.png"/>
+    <image x="0" y="0" width="1731" height="909" transform="translate(-189.67, 79.09) scale(0.7057)" xlink:href="og-scientific-flow.png"/>
   </g>
 </svg>
