@@ -35,8 +35,14 @@ test("server-renders the academic paper page", async () => {
   );
   assert.match(html, /Descriptive Convergence and Interpretive Variation/);
   assert.match(html, /Neemias B da Silva/);
-  assert.match(html, /Qwen3-VL-8B/);
-  assert.match(html, /Gemma-4-E4B-it/);
+  /* The DSI table names the models as the abstract and figures do, without
+     the checkpoint suffixes. */
+  const tableColumns = [
+    ...html
+      .match(/<thead>(.*?)<\/thead>/s)[1]
+      .matchAll(/<th scope="col">(.*?)<\/th>/g),
+  ].map(([, label]) => label);
+  assert.deepEqual(tableColumns, ["Output level", "Qwen3-VL", "Gemma4"]);
   assert.match(html, /Federal University of Technology – Parana \(UTFPR\), Brazil/);
   assert.doesNotMatch(html, /Universidade Tecnológica Federal do Paraná/);
   assert.match(html, /119,707/);

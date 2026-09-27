@@ -302,8 +302,8 @@ export default function Home() {
                 <thead>
                   <tr>
                     <th scope="col">Output level</th>
-                    <th scope="col">Qwen3-VL-8B</th>
-                    <th scope="col">Gemma-4-E4B-it</th>
+                    <th scope="col">Qwen3-VL</th>
+                    <th scope="col">Gemma4</th>
                   </tr>
                 </thead>
                 <tbody>
