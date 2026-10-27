@@ -6,9 +6,9 @@ Descriptive Convergence and Interpretive Variation,”** accepted at the
 Alignment (PANDORA 2026)](https://pandora-workshop.github.io/).
 
 - Website: <https://neemiasbsilva.github.io/Persona-Interpretive-Analysis-Portfolio/>
-- Paper: <https://arxiv.org/abs/2605.29064>
-- PDF: <https://arxiv.org/pdf/2605.29064>
-- DOI: <https://doi.org/10.48550/arXiv.2605.29064>
+- Paper: <https://aclanthology.org/2026.pandora-1.17/>
+- PDF: <https://aclanthology.org/2026.pandora-1.17.pdf>
+- arXiv: <https://arxiv.org/abs/2605.29064>
 - Code: <https://github.com/neemiasbsilva/Persona-Interpretive-Analysis>
 - Dataset: <https://huggingface.co/datasets/MInDS-lab-UTFPR/UrbanPersona-120K-Interpretive>
 
@@ -53,10 +53,29 @@ Ready-to-import citation files are available as
 [`public/citation.ris`](public/citation.ris), and [`CITATION.cff`](CITATION.cff).
 
 ```bibtex
-@inproceedings{silva2026persona,
-      title={Persona Prompting in Multimodal Urban Perception: Descriptive Convergence and Interpretive Variation},
-      author={Neemias Buceli da Silva and Matt Ratto and Myriam Delgado and Rodrigo Minetto and Daniel Silver and Thiago H. Silva},
-      booktitle={EMNLP26 Workshop on Pluralistic AI {\&} NLP: Diversity-aware, Sociotechnical, Responsible Alignment (PANDORA)},
-      year={2026},
+@inproceedings{da-silva-etal-2026-persona,
+    title = "Persona Prompting in Multimodal Urban Perception: Descriptive Convergence and Interpretive Variation",
+    author = "da Silva, Neemias B  and
+      Ratto, Matt  and
+      Delgado, Myriam  and
+      Minetto, Rodrigo  and
+      Silver, Daniel  and
+      Silva, Thiago H.",
+    editor = "Xu, Shanshan  and
+      T.Y.S.S., Santosh  and
+      Kurniawan, Kemal  and
+      Peng, Siyao  and
+      Wallbridge, Sarenne  and
+      Koto, Fajri  and
+      Dziri, Nouha  and
+      Plank, Barbara",
+    booktitle = "Proceedings of the First Workshop on Pluralistic {AI} {NLP}: Diversity-aware, Sociotechnical, Responsible Alignment ({PANDORA} 2026)",
+    month = oct,
+    year = "2026",
+    address = "Budapest, Hungary",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.pandora-1.17/",
+    pages = "301--318",
+    ISBN = "979-8-89176-484-2"
 }
 ```

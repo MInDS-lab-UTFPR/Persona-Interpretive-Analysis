@@ -35,7 +35,34 @@ preferred-citation:
       given-names: "Daniel"
     - family-names: "Silva"
       given-names: "Thiago H"
+  editors:
+    - family-names: "Xu"
+      given-names: "Shanshan"
+    - family-names: "T.Y.S.S."
+      given-names: "Santosh"
+    - family-names: "Kurniawan"
+      given-names: "Kemal"
+    - family-names: "Peng"
+      given-names: "Siyao"
+    - family-names: "Wallbridge"
+      given-names: "Sarenne"
+    - family-names: "Koto"
+      given-names: "Fajri"
+    - family-names: "Dziri"
+      given-names: "Nouha"
+    - family-names: "Plank"
+      given-names: "Barbara"
+  collection-title: "Proceedings of the First Workshop on Pluralistic AI NLP: Diversity-aware, Sociotechnical, Responsible Alignment (PANDORA 2026)"
+  collection-type: proceedings
+  conference:
+    name: "PANDORA 2026"
+    city: "Budapest"
+    country: "HU"
+  publisher:
+    name: "Association for Computational Linguistics"
+  month: 10
   year: 2026
-  collection-title: "Workshop on Pluralistic AI & NLP: Diversity-aware, Sociotechnical, Responsible Alignment (PANDORA 2026)"
-  doi: "10.48550/arXiv.2605.29064"
-  url: "https://arxiv.org/abs/2605.29064"
+  start: 301
+  end: 318
+  isbn: "979-8-89176-484-2"
+  url: "https://aclanthology.org/2026.pandora-1.17/"

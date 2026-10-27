@@ -2,12 +2,31 @@
 
 import { useState } from "react";
 
-/* Template literal: the BibTeX escape \& must be written \\& to survive. */
-const bibtex = `@inproceedings{silva2026persona,
-  title={Persona Prompting in Multimodal Urban Perception: Descriptive Convergence and Interpretive Variation},
-  author={Neemias Buceli da Silva and Matt Ratto and Myriam Delgado and Rodrigo Minetto and Daniel Silver and Thiago H. Silva},
-  booktitle={EMNLP26 Workshop on Pluralistic AI {\\&} NLP: Diversity-aware, Sociotechnical, Responsible Alignment (PANDORA)},
-  year={2026},
+/* The ACL Anthology's own BibTeX export, as served in citation.bib. */
+const bibtex = `@inproceedings{da-silva-etal-2026-persona,
+    title = "Persona Prompting in Multimodal Urban Perception: Descriptive Convergence and Interpretive Variation",
+    author = "da Silva, Neemias B  and
+      Ratto, Matt  and
+      Delgado, Myriam  and
+      Minetto, Rodrigo  and
+      Silver, Daniel  and
+      Silva, Thiago H.",
+    editor = "Xu, Shanshan  and
+      T.Y.S.S., Santosh  and
+      Kurniawan, Kemal  and
+      Peng, Siyao  and
+      Wallbridge, Sarenne  and
+      Koto, Fajri  and
+      Dziri, Nouha  and
+      Plank, Barbara",
+    booktitle = "Proceedings of the First Workshop on Pluralistic {AI} {NLP}: Diversity-aware, Sociotechnical, Responsible Alignment ({PANDORA} 2026)",
+    month = oct,
+    year = "2026",
+    address = "Budapest, Hungary",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.pandora-1.17/",
+    pages = "301--318",
+    ISBN = "979-8-89176-484-2"
 }`;
 
 export function CitationBlock() {

@@ -5,10 +5,23 @@ AU  - Ratto, Matt
 AU  - Delgado, Myriam
 AU  - Minetto, Rodrigo
 AU  - Silver, Daniel
-AU  - Silva, Thiago H
+AU  - Silva, Thiago H.
+A2  - Xu, Shanshan
+A2  - T.Y.S.S., Santosh
+A2  - Kurniawan, Kemal
+A2  - Peng, Siyao
+A2  - Wallbridge, Sarenne
+A2  - Koto, Fajri
+A2  - Dziri, Nouha
+A2  - Plank, Barbara
 PY  - 2026
-DA  - 2026/08/07
-T2  - Workshop on Pluralistic AI & NLP: Diversity-aware, Sociotechnical, Responsible Alignment (PANDORA 2026)
-DO  - 10.48550/arXiv.2605.29064
-UR  - https://arxiv.org/abs/2605.29064
+DA  - 2026/10//
+T2  - Proceedings of the First Workshop on Pluralistic AI NLP: Diversity-aware, Sociotechnical, Responsible Alignment (PANDORA 2026)
+SP  - 301
+EP  - 318
+CY  - Budapest, Hungary
+PB  - Association for Computational Linguistics
+SN  - 979-8-89176-484-2
+UR  - https://aclanthology.org/2026.pandora-1.17/
+L1  - https://aclanthology.org/2026.pandora-1.17.pdf
 ER  -

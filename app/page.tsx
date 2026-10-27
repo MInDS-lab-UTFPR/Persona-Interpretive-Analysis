@@ -10,9 +10,9 @@ export const dynamic = "force-static";
 
 const siteUrl =
   "https://neemiasbsilva.github.io/Persona-Interpretive-Analysis-Portfolio/";
-const paperUrl = "https://arxiv.org/abs/2605.29064";
-const pdfUrl = "https://arxiv.org/pdf/2605.29064";
-const doiUrl = "https://doi.org/10.48550/arXiv.2605.29064";
+const paperUrl = "https://aclanthology.org/2026.pandora-1.17/";
+const pdfUrl = "https://aclanthology.org/2026.pandora-1.17.pdf";
+const arxivUrl = "https://arxiv.org/abs/2605.29064";
 const codeUrl = "https://github.com/neemiasbsilva/Persona-Interpretive-Analysis";
 const datasetUrl =
   "https://huggingface.co/datasets/MInDS-lab-UTFPR/UrbanPersona-120K-Interpretive";
@@ -21,6 +21,10 @@ const fullTitle =
 const venue =
   "Workshop on Pluralistic AI & NLP: Diversity-aware, Sociotechnical, Responsible Alignment (PANDORA 2026)";
 const workshopUrl = "https://pandora-workshop.github.io/";
+/* As the ACL Anthology record titles the volume, so Scholar matches the two. */
+const proceedings =
+  "Proceedings of the First Workshop on Pluralistic AI NLP: Diversity-aware, Sociotechnical, Responsible Alignment (PANDORA 2026)";
+const publisher = "Association for Computational Linguistics";
 
 export const metadata: Metadata = {
   title: fullTitle,
@@ -36,7 +40,7 @@ export const metadata: Metadata = {
     siteName: "Persona Prompting in Multimodal Urban Perception",
     locale: "en_US",
     publishedTime: "2026-05-27",
-    modifiedTime: "2026-09-16",
+    modifiedTime: "2026-10-27",
     images: [
       {
         url: `${siteUrl}og.png`,
@@ -63,10 +67,11 @@ export const metadata: Metadata = {
       "Daniel Silver",
       "Thiago H Silva",
     ],
-    citation_date: "2026/05/27",
-    citation_online_date: "2026/08/07",
-    citation_conference_title: venue,
-    citation_doi: "10.48550/arXiv.2605.29064",
+    citation_publication_date: "2026/10",
+    citation_conference_title: proceedings,
+    citation_publisher: publisher,
+    citation_firstpage: "301",
+    citation_lastpage: "318",
     citation_pdf_url: pdfUrl,
     citation_arxiv_id: "2605.29064",
     citation_abstract_html_url: siteUrl,
@@ -132,19 +137,19 @@ export default function Home() {
         })),
     })),
     datePublished: "2026-05-27",
-    dateModified: "2026-09-16",
-    identifier: [
-      "arXiv:2605.29064",
-      "https://doi.org/10.48550/arXiv.2605.29064",
-    ],
+    dateModified: "2026-10-27",
+    identifier: [paperUrl, "arXiv:2605.29064"],
     url: siteUrl,
     mainEntityOfPage: { "@type": "WebPage", "@id": siteUrl },
     image: `${siteUrl}og.png`,
-    publisher: { "@type": "Organization", name: "arXiv" },
+    publisher: { "@type": "Organization", name: publisher },
+    isPartOf: { "@type": "Book", name: proceedings, isbn: "979-8-89176-484-2" },
+    pageStart: "301",
+    pageEnd: "318",
     publication: { "@type": "PublicationEvent", name: venue, url: workshopUrl },
     inLanguage: "en",
-    license: "https://arxiv.org/abs/2605.29064",
-    sameAs: [paperUrl, doiUrl],
+    license: "https://creativecommons.org/licenses/by/4.0/",
+    sameAs: [paperUrl, arxivUrl],
     isAccessibleForFree: true,
     keywords: [
       "persona prompting",
@@ -227,10 +232,10 @@ export default function Home() {
               <b>PDF</b><span>Paper</span>
             </a>
             <a href={paperUrl} target="_blank" rel="noreferrer">
-              <b>arXiv</b><span>Abstract</span>
+              <b>ACL</b><span>Anthology</span>
             </a>
-            <a href={doiUrl} target="_blank" rel="noreferrer">
-              <b>DOI</b><span>Soon</span>
+            <a href={arxivUrl} target="_blank" rel="noreferrer">
+              <b>arXiv</b><span>Abstract</span>
             </a>
             <a href="#cite">
               <b>BIB</b><span>Citation</span>
