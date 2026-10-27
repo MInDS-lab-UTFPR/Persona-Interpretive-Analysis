@@ -234,9 +234,6 @@ export default function Home() {
             <a href={paperUrl} target="_blank" rel="noreferrer">
               <b>ACL</b><span>Anthology</span>
             </a>
-            <a href={arxivUrl} target="_blank" rel="noreferrer">
-              <b>arXiv</b><span>Abstract</span>
-            </a>
             <a href="#cite">
               <b>BIB</b><span>Citation</span>
             </a>

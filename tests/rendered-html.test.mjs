@@ -53,9 +53,11 @@ test("server-renders the academic paper page", async () => {
   assert.match(html, /citation_firstpage/);
   assert.match(html, /citation_lastpage/);
   /* The ACL Anthology record is the paper of record: the PDF and the paper
-     link open it, and the arXiv DOI is not passed off as the paper's own. */
+     link open it, no arXiv button competes with them, and the arXiv DOI is
+     not passed off as the paper's own. */
   assert.match(html, /<a href="https:\/\/aclanthology\.org\/2026\.pandora-1\.17\.pdf"[^>]*><b>PDF<\/b>/);
   assert.match(html, /<a href="https:\/\/aclanthology\.org\/2026\.pandora-1\.17\/"[^>]*><b>ACL<\/b>/);
+  assert.doesNotMatch(html, /<b>arXiv<\/b>/);
   assert.doesNotMatch(html, /10\.48550\/arXiv/);
   /* The lockup splits the venue across spans; the spaces between them are
      what keep a screen reader from announcing "EMNLP 2026Workshop". */
